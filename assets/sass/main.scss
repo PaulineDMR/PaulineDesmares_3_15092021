@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+
+/* General */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+}
+
+/* Variables */
+
+/* Colors */
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$third-color: #99E2D0;
+$light-bg: #F6F6F6;
+$medium-bg: #EAEAEA;
+$dark-bg: #353535;
+
+/* block shadow */
+@mixin block-shadow {
+    box-shadow: 4px 4px 10px 1px #DFDFDF;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 12px;
+    @include block-shadow;
+    z-index: 999;
+}
+
+.logo {
+    width: 180px;
+    &__img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Header responsive*/
+@media screen and (min-width: 1025px) {
+    .logo {
+        width: 280px;
+    }
+}
+
+
+/* SECTION LOCALISATION */
+
+#localisation {
+    padding: 15px 0;
+    background-color: $medium-bg;
+    /*box-shadow: inset 0px 3px 4px 0px #000000*/
+}
+
+.localisation {
+    text-align: center;
+}
