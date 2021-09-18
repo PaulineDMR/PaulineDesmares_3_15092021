@@ -134,30 +134,33 @@ section#selection {
     max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 980px) {
         padding: 40px;
     }
     > div {
         width: 100%;
         padding: 50px 20px 40px;
-        @media screen and (min-width: 1025px) {
-            padding: 40px 40px;
+        @media screen and (min-width: 980px) {
+            padding: 40px;
         }
     }
     > div:first-child {
-        @media screen and (min-width: 1025px) {
+        @media screen and (min-width: 980px) {
             width: 35%;
+            max-width: 350px;
+            padding: 40px 40px 40px 0
         }
     }
     > div:nth-child(2) {
         background-color: $light-bg;
-        @media screen and (min-width: 1025px) {
+        @media screen and (min-width: 980px) {
+            flex-grow: 1;
             width: 65%;
             border-radius: 16px;
         }
     }
 }
-
+/* Fonctionnement */
 #fonctionnement {
     > div {
         margin-top: 40px;
@@ -196,6 +199,66 @@ section#selection {
         background-color: $primary-superlight; 
         .fonctionnement__icon {
             color: $primary-color;
+        }
+    }
+}
+
+/* Restaurants */
+.carte-restaurant {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    box-shadow: 4px 4px 10px 1px #dfdfdf;
+    position: relative;
+    &__img {
+        img {
+            height: 170px;
+            width:100%;
+            display: block;
+            border-radius: 16px 16px 0 0;
+            object-fit: cover;
+            object-position: center bottom;
+        }
+    }
+    &__img {
+        span {
+            padding: 7px 12px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: darken($third-color, 40%);
+            background-color: $third-color;
+            border-radius: 1px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+    &__infos {
+        margin-top: 20px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        h3 {
+            padding-bottom: 5px;
+            font-size: 18px;
+        }
+        p {
+            font-size: 17px;
+            font-weight: 300;
+        }
+        i {
+            padding: 5px 10px;
+            font-size: 22px;
+        }
+    }
+    &--2 {
+        .carte-restaurant__img {
+            img {
+                object-position: center -155px;
+            }
         }
     }
 }
