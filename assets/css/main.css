@@ -43,8 +43,8 @@ main {
   border-radius: 40px;
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-box-shadow: 4px 4px 10px 1px #c2c2c2;
-          box-shadow: 4px 4px 10px 1px #c2c2c2;
+  -webkit-box-shadow: 4px 4px 10px 1px #c6c6c6;
+          box-shadow: 4px 4px 10px 1px #c6c6c6;
 }
 
 .main-btn__button:hover {
@@ -132,5 +132,101 @@ header {
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: 300;
+}
+
+/* SECTION SELECTION */
+section#selection {
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1025px) {
+  section#selection {
+    padding: 40px;
+  }
+}
+
+section#selection > div {
+  width: 100%;
+  padding: 50px 20px 40px;
+}
+
+@media screen and (min-width: 1025px) {
+  section#selection > div {
+    padding: 40px 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  section#selection > div:first-child {
+    width: 35%;
+  }
+}
+
+section#selection > div:nth-child(2) {
+  background-color: #F6F6F6;
+}
+
+@media screen and (min-width: 1025px) {
+  section#selection > div:nth-child(2) {
+    width: 65%;
+    border-radius: 16px;
+  }
+}
+
+#fonctionnement > div {
+  margin-top: 40px;
+}
+
+.fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #F6F6F6;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  padding: 25px 10px;
+  border-radius: 20px;
+  -webkit-box-shadow: 4px 4px 10px 1px #e4e4e4;
+          box-shadow: 4px 4px 10px 1px #e4e4e4;
+}
+
+.fonctionnement__number {
+  padding: 3px 8px;
+  border-radius: 50%;
+  position: relative;
+  left: -24px;
+  background-color: #9356DC;
+  color: white;
+  font-size: 16px;
+}
+
+.fonctionnement__icon {
+  color: #8e8e8e;
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+.fonctionnement__texte {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.fonctionnement--secondary {
+  background-color: #f2eafb;
+}
+
+.fonctionnement--secondary .fonctionnement__icon {
+  color: #9356DC;
 }
 /*# sourceMappingURL=main.css.map */
