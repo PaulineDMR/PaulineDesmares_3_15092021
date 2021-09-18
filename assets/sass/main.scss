@@ -33,10 +33,31 @@ $third-color: #99E2D0;
 $light-bg: #F6F6F6;
 $medium-bg: #EAEAEA;
 $dark-bg: #353535;
+$primary-light: lighten($primary-color, 5%);
+$secondary-light: lighten($secondary-color, 5%);
 
 /* block shadow */
 @mixin block-shadow {
-    box-shadow: 4px 4px 10px 1px #DFDFDF;
+    box-shadow: 4px 4px 10px 1px #c2c2c2;
+}
+
+/* Bouton principal */
+
+.main-btn {
+    margin: 15px 0;
+    &__button {
+        padding: 15px 20px;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 40px;
+        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+        @include block-shadow;
+    }
+    &__button:hover {
+        background: linear-gradient(to bottom right, $secondary-light, $primary-light);
+        box-shadow: 8px 8px 10px 1px #c2c2c2
+    }
 }
 
 
@@ -47,7 +68,6 @@ header {
     display: flex;
     justify-content: center;
     padding: 20px 0 12px;
-    @include block-shadow;
     z-index: 999;
 }
 
@@ -78,4 +98,31 @@ header {
 
 .localisation {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    &__icon {
+        margin-right: 10px;
+    }
 }
+
+
+/* SECTION PRESENTATION */
+
+.presentation {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $light-bg;
+    h1 {
+        margin-bottom: 15px;
+        padding: 0 20px;
+    }
+    h2 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
