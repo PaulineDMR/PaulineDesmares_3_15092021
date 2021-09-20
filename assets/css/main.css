@@ -18,7 +18,7 @@ body {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -274,6 +274,12 @@ section#selection > div:nth-child(2) {
   -webkit-box-shadow: 4px 4px 10px 1px #dfdfdf;
           box-shadow: 4px 4px 10px 1px #dfdfdf;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .carte-restaurant {
+    margin-bottom: 30px;
+  }
 }
 
 .carte-restaurant__img img {
