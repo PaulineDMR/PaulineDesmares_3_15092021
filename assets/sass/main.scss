@@ -209,6 +209,7 @@ section#selection {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 40px;
     a {
         width: 100%;
         @media screen and (min-width: 768px) {
@@ -271,6 +272,38 @@ section#selection {
         .carte-restaurant__img {
             img {
                 object-position: center -155px;
+            }
+        }
+    }
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: $dark-bg;
+    color: white;
+    padding: 20px 20px 30px;
+    div {
+        max-width: 1440;
+    }
+    h2 {
+        font-family: 'Shrikhand', cursive;
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    ul {
+        list-style: none;
+        > li {
+            padding-bottom: 8px;
+            i {
+                padding-right: 5px;
+                font-size: 14px;
+            }
+        }
+        > li:first-child {
+            i {
+                padding-right: 12px;
             }
         }
     }

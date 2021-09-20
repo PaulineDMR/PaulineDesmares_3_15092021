@@ -246,6 +246,7 @@ section#selection > div:nth-child(2) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 40px;
 }
 
 .grid-restaurants a {
@@ -327,5 +328,39 @@ section#selection > div:nth-child(2) {
 .carte-restaurant--2 .carte-restaurant__img img {
   -o-object-position: center -155px;
      object-position: center -155px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 20px 20px 30px;
+}
+
+footer div {
+  max-width: 1440;
+}
+
+footer h2 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul > li {
+  padding-bottom: 8px;
+}
+
+footer ul > li i {
+  padding-right: 5px;
+  font-size: 14px;
+}
+
+footer ul > li:first-child i {
+  padding-right: 12px;
 }
 /*# sourceMappingURL=main.css.map */
