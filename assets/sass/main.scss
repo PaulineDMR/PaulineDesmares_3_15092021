@@ -269,7 +269,19 @@ section#selection {
         i {
             padding: 5px 10px;
             font-size: 22px;
+            transition: background-color 1s ease;
+            &:hover {
+                background-color: $secondary-color;
+            }
         }
+        /*img {
+            padding: 5px 10px;
+            font-size: 18px;
+            transition: background-color 1s ease;
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }*/
     }
     &--2 {
         .carte-restaurant__img {

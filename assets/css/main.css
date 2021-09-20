@@ -314,6 +314,14 @@ section#selection > div:nth-child(2) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  /*img {
+            padding: 5px 10px;
+            font-size: 18px;
+            transition: background-color 1s ease;
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }*/
 }
 
 .carte-restaurant__infos h3 {
@@ -329,6 +337,12 @@ section#selection > div:nth-child(2) {
 .carte-restaurant__infos i {
   padding: 5px 10px;
   font-size: 22px;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+}
+
+.carte-restaurant__infos i:hover {
+  background-color: #FF79DA;
 }
 
 .carte-restaurant--2 .carte-restaurant__img img {
