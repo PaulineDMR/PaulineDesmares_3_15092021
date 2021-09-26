@@ -1,0 +1,77 @@
+@import 'main.scss';
+
+.menu-header {
+    height: 300px;
+    &__img {
+        img {
+            display: block;
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center -100px;
+            @media screen and (min-width: 768px) {
+                object-position: center center;
+            }
+        }
+    }
+}
+
+/* Menu */
+
+.menu-restaurant {
+    background-color: $medium-bg;
+    position: relative;
+    top: -80px;
+    padding: 30px 20px 50px;
+    border-radius: 40px 40px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        h1 {
+            font-family: $secondary-font;
+            font-size: 28px;
+        }
+        i {
+            font-size: 24px;
+            padding-right: 10px;
+        }
+    }
+    &__block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    &__btn {
+        width: 100%;
+        text-align: center;
+        button {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+    
+}
+
+.plats-block {
+    &__type {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 300;
+
+        border-bottom: 3px $third-color solid;
+        &::after {
+            content: "";
+            height: 10px;
+            width: 40px;
+            border-bottom: 3px $third-color solid;
+        }
+    }
+}
+
+
+
+

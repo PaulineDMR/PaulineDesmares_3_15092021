@@ -39,10 +39,16 @@ $secondary-light: lighten($secondary-color, 5%);
 /* Max-width */
 $desktop-max-width : 1440px;
 
+/* fonts */
+$secondary-font: 'Shrikhand', cursive;
+
+/* Mixins */
+
 /* block shadow */
 @mixin block-shadow {
     box-shadow: 4px 4px 10px 1px #e4e4e4;
 }
+
 
 /* Bouton principal */
 
@@ -66,7 +72,7 @@ $desktop-max-width : 1440px;
 
 /* HEADER */
 
-header {
+main > header {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -76,6 +82,9 @@ header {
 
 .logo {
     width: 180px;
+    @media screen and (min-width: 1025px) {
+        width: 280px;
+    }
     &__img {
         display: block;
         width: 100%;
@@ -84,11 +93,7 @@ header {
 }
 
 /* Header responsive*/
-@media screen and (min-width: 1025px) {
-    .logo {
-        width: 280px;
-    }
-}
+
 
 
 /* SECTION LOCALISATION */
@@ -277,14 +282,6 @@ section#selection {
                 background-color: $secondary-color;
             }
         }
-        /*img {
-            padding: 5px 10px;
-            font-size: 18px;
-            transition: background-color 1s ease;
-            &:hover {
-                background-color: $secondary-color;
-            }
-        }*/
     }
     &--2 {
         .carte-restaurant__img {
@@ -306,7 +303,7 @@ footer {
         max-width: 1440;
     }
     h2 {
-        font-family: 'Shrikhand', cursive;
+        font-family: $secondary-font;
         font-size: 17px;
         margin-bottom: 15px;
     }
