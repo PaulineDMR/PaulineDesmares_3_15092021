@@ -21,7 +21,6 @@ a {
 
 main {
     width: 100%;
-    max-width: 1440px;
 }
 
 /* Variables */
@@ -36,6 +35,9 @@ $dark-bg: #353535;
 $primary-light: lighten($primary-color, 5%);
 $primary-superlight: lighten($primary-color, 35%);
 $secondary-light: lighten($secondary-color, 5%);
+
+/* Max-width */
+$desktop-max-width : 1440px;
 
 /* block shadow */
 @mixin block-shadow {
@@ -132,6 +134,7 @@ header {
 
 section#selection {
     max-width: 1440px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     @media screen and (min-width: 980px) {
