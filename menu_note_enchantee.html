@@ -24,36 +24,126 @@
                         <img src="assets/img/la-note-enchantee-3024x3780.jpg" alt="Photo d'un plat de poisson du restaurant La Note Enchantée">
                     </div>
                 </header>
-                <div class="menu-restaurant">
-                    <div class="menu-restaurant__header">
-                        <h1>La note enchantée</h1>
-                        <i class="far fa-heart"></i>
+                <div class="restaurant">
+                    <div class="restaurant__header">
+                        <h1 class="restaurant__name">La note enchantée</h1>
+                        <i class="restaurant__like far fa-heart"></i>
                     </div>
-                    <div class="menu-restaurant__block plats-block">
-                        <h2 class="plats-block__type">Entrées</h2>
-                        <div class="plats-block__plat plat-infos">
-                            <h3 class="plat-infos__nom">Ravioles de foie gras</h3>
-                            <p class="plat-infos__details">Accompagnés de leur crème à la truffe</p>
-                            <p class="plat-infos__price">25€</p>
+                    <div class="restaurant__meals-group">
+                        <h2 class="restaurant__meals-type">Entrées</h2>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Ravioles de foie gras</h3>
+                                <p class="meal-card__text">Accompagnés de leur crème à la truffe</p>
+                            </div>
+                            <p class="meal-card__price">25€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
                         </div>
-                        <div class="plats-block__plat plat-infos"></div>
-                        <div class="plats-block__plat plat-infos"></div>
-                        <div class="plats-block__plat plat-infos"></div>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Caviar osciètre</h3>
+                                <p class="meal-card__text">Sur blini à la farine de blé noir</p>
+                            </div>
+                            <p class="meal-card__price">35€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Homard et espuma de potiron</h3>
+                                <p class="meal-card__text">Mariné aux zestes d'orange</p>
+                            </div>
+                            <p class="meal-card__price">20€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Foie gras de canard cuit entier</h3>
+                                <p class="meal-card__text">Confiture de figue et pain toasté</p>
+                            </div>
+                            <p class="meal-card__price">35€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
+                        </div>                      
                     </div>
-                    <div class="menu-restaurant__block plats-block">
 
+                    <div class="restaurant__meals-group">
+                        <h2 class="restaurant__meals-type">Plats</h2>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Noix de coquilles Saint-Jacques</h3>
+                                <p class="meal-card__text">Sur lit de purée de céleri-rave</p>
+                            </div>
+                            <p class="meal-card__price">40€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Langoustine poêlée</h3>
+                                <p class="meal-card__text">Purée de patate douce</p>
+                            </div>
+                            <p class="meal-card__price">35€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Mijoté de queue de boeuf</h3>
+                                <p class="meal-card__text">Et riz sauvage aux zestes de citron</p>
+                            </div>
+                            <p class="meal-card__price">44€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
+                        </div>                    
                     </div>
-                    <div class="menu-restaurant__block plats-block">
 
+                    <div class="restaurant__meals-group">
+                        <h2 class="restaurant__meals-type">Desserts</h2>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Macaron noisette et chocolat</h3>
+                                <p class="meal-card__text">Glace au caramel brun et sel de Guérande</p>
+                            </div>
+                            <p class="meal-card__price">18€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Baba au rhum revisité</h3>
+                                <p class="meal-card__text">Avec son coulis de citron</p>
+                            </div>
+                            <p class="meal-card__price">22€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="meal-card">
+                            <div class="meal-card__description">
+                                <h3 class="meal-card__name">Tarte au citron meringuée</h3>
+                                <p class="meal-card__text">Déstructurée</p>
+                            </div>
+                            <p class="meal-card__price">23€</p> <!-- voire si je mets une div ou pas -->
+                            <div class="meal-card--hovered">
+                                <i class="meal-card__checked-icon fas fa-check-circle"></i>
+                            </div>
+                        </div>                
                     </div>
-                    <a href="#" class="menu-restaurant__btn main-btn"><button class="main-btn__button">Commander</button></a>
+                    <a href="#" class="restaurant__order-btn main-btn"><button class="main-btn__button">Commander</button></a>
                 </div>
-                
             </section>
-
-			
-				
-
+            
 			<footer>
 				<div class="footer">
 					<h2>ohmyfood</h2>
