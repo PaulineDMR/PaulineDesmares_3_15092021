@@ -329,15 +329,25 @@ section#selection > div:nth-child(2) {
   font-weight: 300;
 }
 
-.carte-restaurant__infos i {
+.carte-restaurant__like:before {
+  content: "\f004";
+  font-weight: 400;
+  font-family: "Font Awesome 5 Free";
   padding: 5px 10px;
   font-size: 22px;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-transition: font-weight 1s ease, color 1s ease, background-image 1s ease, background-clip 1s ease;
+  transition: font-weight 1s ease, color 1s ease, background-image 1s ease, background-clip 1s ease;
 }
 
-.carte-restaurant__infos i:hover {
-  background-color: #FF79DA;
+.carte-restaurant__like:hover:before {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #9356dc), color-stop(70%, #ff79da));
+  background-image: linear-gradient(180deg, #9356dc 10%, #ff79da 70%);
+  font-weight: 900;
 }
 
 .carte-restaurant--2 .carte-restaurant__img img {
@@ -382,3 +392,4 @@ footer ul > li a {
 footer ul > li:first-child i {
   padding-right: 12px;
 }
+/*# sourceMappingURL=main.css.map */

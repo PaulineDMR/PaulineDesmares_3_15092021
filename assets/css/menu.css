@@ -332,12 +332,14 @@ section#selection > div:nth-child(2) {
 .carte-restaurant__infos i {
   padding: 5px 10px;
   font-size: 22px;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease;
+  -webkit-transition: background-color 1s ease, color 1s ease;
+  transition: background-color 1s ease, color 1s ease;
+  background-clip: text;
 }
 
 .carte-restaurant__infos i:hover {
   background-color: #FF79DA;
+  color: transparent;
 }
 
 .carte-restaurant--2 .carte-restaurant__img img {
@@ -555,3 +557,4 @@ footer ul > li:first-child i {
   color: white;
   font-size: 20px;
 }
+/*# sourceMappingURL=menu.css.map */
