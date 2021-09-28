@@ -414,6 +414,28 @@ footer ul > li:first-child i {
   padding-right: 12px;
 }
 
+/* Animations affichage des vignettes de plat*/
+@-webkit-keyframes display-meals {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes display-meals {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
 .menu-header {
   height: 300px;
 }
@@ -535,6 +557,28 @@ footer ul > li:first-child i {
           box-shadow: 4px 4px 8px 1px #dedede;
   margin-bottom: 20px;
   overflow: hidden;
+  -webkit-animation: display-meals 1s ease-out backwards;
+          animation: display-meals 1s ease-out backwards;
+}
+
+.meal-card--1 {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+
+.meal-card--2 {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.meal-card--3 {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+
+.meal-card--4 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 
 .meal-card:hover .meal-card--hovered {
@@ -665,4 +709,3 @@ footer ul > li:first-child i {
   transition: 1s transform ease .5s;
   transition: 1s transform ease .5s, 1s -webkit-transform ease .5s;
 }
-/*# sourceMappingURL=menu.css.map */

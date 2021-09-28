@@ -1,5 +1,21 @@
 @import 'main.scss';
 
+/* Animations affichage des vignettes de plat*/
+$num-meals: 4;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-meals;
+
+@keyframes display-meals {
+    0% {
+        opacity: 0;
+        top: 30px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .menu-header {
     height: 300px;
     &__img {
@@ -87,6 +103,12 @@
     box-shadow: 4px 4px 8px 1px #dedede;
     margin-bottom: 20px;
     overflow: hidden;
+    animation: display-meals 1s ease-out backwards;
+    @for $i from 1 through $num-meals {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+         }
+    }
     &:hover{
         .meal-card--hovered {
             transform: translateX(-100px);
