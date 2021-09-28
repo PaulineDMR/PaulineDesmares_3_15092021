@@ -57,6 +57,36 @@ main {
           box-shadow: 8px 8px 10px 1px #c2c2c2;
 }
 
+/* Coeur - favoris */
+.heart:before {
+  position: relative;
+  top: 5px;
+  content: "\f004";
+  font-weight: 400;
+  font-family: "Font Awesome 5 Free";
+  padding: 5px 10px;
+  font-size: 22px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-transition: font-weight 1s ease, color 1s ease, background-image 1s ease, background-clip 1s ease;
+  transition: font-weight 1s ease, color 1s ease, background-image 1s ease, background-clip 1s ease;
+}
+
+.heart:hover:before {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #9356dc), color-stop(70%, #ff79da));
+  background-image: linear-gradient(180deg, #9356dc 10%, #ff79da 70%);
+  font-weight: 900;
+}
+
+.heart--menu:before {
+  top: 0;
+  right: 10px;
+  font-size: 24px;
+}
+
 /* HEADER */
 main > header {
   width: 100%;
@@ -341,27 +371,6 @@ section#selection > div:nth-child(2) {
   font-weight: 300;
 }
 
-.carte-restaurant__like:before {
-  content: "\f004";
-  font-weight: 400;
-  font-family: "Font Awesome 5 Free";
-  padding: 5px 10px;
-  font-size: 22px;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-transition: font-weight 1s ease, color 1s ease, background-image 1s ease, background-clip 1s ease;
-  transition: font-weight 1s ease, color 1s ease, background-image 1s ease, background-clip 1s ease;
-}
-
-.carte-restaurant__like:hover:before {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #9356dc), color-stop(70%, #ff79da));
-  background-image: linear-gradient(180deg, #9356dc 10%, #ff79da 70%);
-  font-weight: 900;
-}
-
 .carte-restaurant--2 .carte-restaurant__img img {
   -o-object-position: center -155px;
      object-position: center -155px;
@@ -467,11 +476,6 @@ footer ul > li:first-child i {
 .restaurant__name {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
-}
-
-.restaurant__like {
-  font-size: 24px;
-  padding-right: 10px;
 }
 
 .restaurant__meals-group {
