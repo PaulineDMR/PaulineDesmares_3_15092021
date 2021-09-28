@@ -30,6 +30,7 @@ main {
 /* Colors */
 /* Max-width */
 /* fonts */
+/* Breakpoints */
 /* Mixins */
 /* block shadow */
 /* Bouton principal */
@@ -74,7 +75,7 @@ main > header {
   width: 180px;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1124px) {
   .logo {
     width: 280px;
   }

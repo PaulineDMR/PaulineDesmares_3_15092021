@@ -20,13 +20,17 @@
 
 .restaurant {
     background-color: $medium-bg;
+    max-width: 1440px;
     position: relative;
     top: -80px;
-    margin-bottom: -80px;
+    margin: 0 auto -80px;
     padding: 30px 15px 50px;
     border-radius: 40px 40px 0 0;
     display: flex;
     flex-wrap: wrap;
+    @media screen and (min-width: $tablet) {
+        justify-content: space-between;
+    }
     &__header {
         width: 100%;
         display: flex;
@@ -45,6 +49,9 @@
     &__meals-group {
         width: 100%;
         margin-bottom: 30px;
+        @media screen and (min-width: $labtop) {
+            width: 32%;
+        }
     }
     &__meals-type {
         text-transform: uppercase;
@@ -95,7 +102,8 @@
     &__description {
         display: flex;
         flex-wrap: wrap;
-        padding: 12px 10px;
+        align-items: baseline;
+        padding: 12px 0 12px 10px;
         max-width: calc(100% - 60px);
         min-width: calc(100% - 120px);
     }
@@ -105,6 +113,15 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        width: 100%;
+        @media screen and (min-width: $tablet) {
+            width: auto;
+            margin-right: 20px;
+        }
+        @media screen and (min-width: $labtop) {
+            width: 100%;
+            margin-right: 0;
+        }
     }
     &__text {
         font-weight: 300;
@@ -118,6 +135,12 @@
         font-weight: 500;
         padding: 12px 0 12px 10px;
         min-width: 60px;
+        @media screen and (min-width: $tablet) {
+            align-self: center;
+        }
+        @media screen and (min-width: $labtop) {
+            align-self: flex-end;
+        }
     }
     &--hovered {
         background-color: $third-color;
@@ -131,6 +154,12 @@
         justify-content: center;
         align-items: center;
         transition: 1s transform ease;
+        @media screen and (min-width: $tablet) {
+            height: 51px;
+        }
+        @media screen and (min-width: $labtop) {
+            height: 69px;
+        }
     }
     &__checked-icon {
         color: white;
