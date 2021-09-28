@@ -78,6 +78,7 @@ main > header {
     justify-content: center;
     padding: 20px 0 12px;
     z-index: 999;
+    position: relative
 }
 
 .logo {
@@ -89,6 +90,13 @@ main > header {
         display: block;
         width: 100%;
         object-fit: cover;
+    }
+    &--shadow {
+        height: 63.22px;
+        width: 100%;
+        position: absolute;
+        top: 0; z-index:999;
+        box-shadow: 0px 1px 4px 1px #cacaca;
     }
 }
 
