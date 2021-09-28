@@ -87,9 +87,14 @@
     box-shadow: 4px 4px 8px 1px #dedede;
     margin-bottom: 20px;
     overflow: hidden;
-    &:hover .meal-card--hovered {
-        transform: translateX(-100px);
-        position: relative;
+    &:hover{
+        .meal-card--hovered {
+            transform: translateX(-100px);
+            position: relative;
+        }
+        .meal-card__checked-icon {
+            transform: rotate(360deg);
+        }
     }
     &:active .meal-card--hovered {
         transform: translateX(-100px);
@@ -160,6 +165,7 @@
     &__checked-icon {
         color: white;
         font-size: 20px;
+        transition: 1s transform ease .5s;
     }
 }
 
