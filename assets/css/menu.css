@@ -67,6 +67,7 @@ main > header {
           justify-content: center;
   padding: 20px 0 12px;
   z-index: 999;
+  position: relative;
 }
 
 .logo {
@@ -84,6 +85,16 @@ main > header {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.logo--shadow {
+  height: 63.22px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  -webkit-box-shadow: 0px 1px 4px 1px #cacaca;
+          box-shadow: 0px 1px 4px 1px #cacaca;
 }
 
 /* Header responsive*/
@@ -329,17 +340,25 @@ section#selection > div:nth-child(2) {
   font-weight: 300;
 }
 
-.carte-restaurant__infos i {
+.carte-restaurant__like:before {
+  content: "\f004";
+  font-weight: 400;
+  font-family: "Font Awesome 5 Free";
   padding: 5px 10px;
   font-size: 22px;
-  -webkit-transition: background-color 1s ease, color 1s ease;
-  transition: background-color 1s ease, color 1s ease;
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-transition: font-weight 1s ease, color 1s ease, background-image 1s ease, background-clip 1s ease;
+  transition: font-weight 1s ease, color 1s ease, background-image 1s ease, background-clip 1s ease;
 }
 
-.carte-restaurant__infos i:hover {
-  background-color: #FF79DA;
+.carte-restaurant__like:hover:before {
   color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #9356dc), color-stop(70%, #ff79da));
+  background-image: linear-gradient(180deg, #9356dc 10%, #ff79da 70%);
+  font-weight: 900;
 }
 
 .carte-restaurant--2 .carte-restaurant__img img {
@@ -498,9 +517,16 @@ footer ul > li:first-child i {
   overflow: hidden;
 }
 
-.meal-card:hover {
-  /*transform: translateX(-100px);
-        position: relative;*/
+.meal-card:hover .meal-card--hovered {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  position: relative;
+}
+
+.meal-card:active .meal-card--hovered {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  position: relative;
 }
 
 .meal-card__description {
@@ -510,37 +536,42 @@ footer ul > li:first-child i {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 12px 10px;
+  max-width: calc(100% - 60px);
+  min-width: calc(100% - 120px);
 }
 
 .meal-card__name {
   font-weight: 500;
   padding-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .meal-card__text {
   font-weight: 300;
   font-size: 15px;
-  /*white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .meal-card__price {
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-weight: 500;
-  padding: 12px 10px 12px 20px;
+  padding: 12px 0 12px 10px;
   min-width: 60px;
 }
 
 .meal-card--hovered {
   background-color: #99E2D0;
-  /*position: relative;
-        right: -100px;*/
+  position: absolute;
+  right: -100px;
   border-radius: 0 16px 16px 0;
   width: 60px;
   min-width: 60px;
-  /*height: 75px;*/
+  height: 69px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,7 +581,10 @@ footer ul > li:first-child i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*transition: 1s transform ease;*/
+  -webkit-transition: 1s -webkit-transform ease;
+  transition: 1s -webkit-transform ease;
+  transition: 1s transform ease;
+  transition: 1s transform ease, 1s -webkit-transform ease;
 }
 
 .meal-card__checked-icon {
