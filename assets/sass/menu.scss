@@ -23,6 +23,8 @@ $anim-delay: $anim-dur / $num-meals;
     }
 }
 
+/* Menu */
+
 .menu-header {
     height: 300px;
     &__img {
@@ -96,13 +98,10 @@ $anim-delay: $anim-dur / $num-meals;
         }
     }
     &__order-btn {
-        width: 100%;
+        margin: 0 auto 15px;
         text-align: center;
-        margin: 0 0 15px;
-        button {
-            padding-left: 50px;
-            padding-right: 50px;
-        }
+        padding-left: 50px;
+        padding-right: 50px;
     } 
 }
 
