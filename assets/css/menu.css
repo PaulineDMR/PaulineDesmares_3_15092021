@@ -660,9 +660,9 @@ footer ul > li:first-child i {
 .meal-card__checked-icon {
   color: white;
   font-size: 20px;
-  -webkit-transition: 1s -webkit-transform ease .5s;
-  transition: 1s -webkit-transform ease .5s;
-  transition: 1s transform ease .5s;
-  transition: 1s transform ease .5s, 1s -webkit-transform ease .5s;
+  -webkit-transition: 1s -webkit-transform ease .3s;
+  transition: 1s -webkit-transform ease .3s;
+  transition: 1s transform ease .3s;
+  transition: 1s transform ease .3s, 1s -webkit-transform ease .3s;
 }
 /*# sourceMappingURL=menu.css.map */
