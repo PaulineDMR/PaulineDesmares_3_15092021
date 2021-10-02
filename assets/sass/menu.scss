@@ -143,8 +143,8 @@ $anim-delay: $anim-dur / $num-meals;
         flex-wrap: wrap;
         align-items: baseline;
         padding: 12px 0 12px 10px;
-        max-width: calc(100% - $price-minwidth);
-        min-width: calc(100% - $price-minwidth - $checked-width);
+        max-width: calc(100% - #{$price-minwidth});
+        min-width: calc(100% - #{$price-minwidth} - #{$checked-width});
     }
     &__name {
         font-weight: 500;

@@ -378,8 +378,8 @@ footer ul > li:first-child i {
       -ms-flex-align: baseline;
           align-items: baseline;
   padding: 12px 0 12px 10px;
-  max-width: calc(100% - $price-minwidth);
-  min-width: calc(100% - $price-minwidth - $checked-width);
+  max-width: calc(100% - 55px);
+  min-width: calc(100% - 55px - 60px);
 }
 
 .meal-card__name {
@@ -479,3 +479,4 @@ footer ul > li:first-child i {
   transition: 1s transform ease .3s;
   transition: 1s transform ease .3s, 1s -webkit-transform ease .3s;
 }
+/*# sourceMappingURL=menu.css.map */
