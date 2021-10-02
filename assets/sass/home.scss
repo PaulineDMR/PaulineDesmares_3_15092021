@@ -21,9 +21,13 @@
 
 
 }
-@keyframes logo {
-    50% {
-        opacity: 0;
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
     }
 }
 
@@ -43,17 +47,13 @@
     &__logo-box {
         margin-top: 30vh;
     }
-    &__logo-text {
-        font-family: $secondary-font;
-        font-size: 36px;
-        animation: logo 700ms 4;
+    &__spinner {
+        font-size: 50px;
+        animation: spin 1000ms linear 4;
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
         background-image: linear-gradient(180deg, rgba(147,86,220,1) 10%, rgba(255,121,218,1) 70%);
-        @media screen and (min-width:768px) {
-            font-size: 50px;
-        }
     }
 }
 
