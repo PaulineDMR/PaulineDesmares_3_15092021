@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import 'variables.scss';
 
 /* General */
 
@@ -12,6 +12,7 @@
 body {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 a {
@@ -21,36 +22,6 @@ a {
 
 main {
     width: 100%;
-}
-
-/* Variables */
-
-/* Colors */
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$third-color: #99E2D0;
-$light-bg: #F6F6F6;
-$medium-bg: #EAEAEA;
-$dark-bg: #353535;
-$primary-light: lighten($primary-color, 5%);
-$primary-superlight: lighten($primary-color, 35%);
-$secondary-light: lighten($secondary-color, 5%);
-
-/* Max-width */
-$desktop-max-width : 1440px;
-
-/* fonts */
-$secondary-font: 'Shrikhand', cursive;
-
-/* Breakpoints */
-$labtop: 1124px;
-$tablet: 768px;
-$tablet-large: 980px;
-/* Mixins */
-
-/* block shadow */
-@mixin block-shadow {
-    box-shadow: 4px 4px 10px 1px #e4e4e4;
 }
 
 
@@ -103,7 +74,6 @@ $tablet-large: 980px;
 }
 
 
-
 /* HEADER */
 
 main > header {
@@ -131,197 +101,8 @@ main > header {
         position: absolute;
         top: 0; z-index:999;
         box-shadow: 0px 1px 4px 1px #cacaca;
-    }
-}
-
-/* Header responsive*/
-
-
-
-/* SECTION LOCALISATION */
-
-#localisation {
-    padding: 15px 0;
-    background-color: $medium-bg;
-    /*box-shadow: inset 0px 3px 4px 0px #000000*/
-}
-
-.localisation {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    &__icon {
-        margin-right: 10px;
-    }
-}
-
-
-/* SECTION PRESENTATION */
-
-.presentation {
-    padding: 40px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: $light-bg;
-    h1 {
-        margin-bottom: 15px;
-        padding: 0 20px;
-    }
-    h2 {
-        margin-bottom: 15px;
-        font-size: 18px;
-        font-weight: 300;
-    }
-}
-
-
-/* SECTION SELECTION */
-
-section#selection {
-    max-width: 1440px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (min-width: $tablet-large) {
-        padding: 40px;
-    }
-    > div {
-        width: 100%;
-        padding: 50px 20px 40px;
-        @media screen and (min-width: $tablet-large) {
-            padding: 40px;
-        }
-    }
-    > div:first-child {
-        @media screen and (min-width: $tablet-large) {
-            width: 35%;
-            max-width: 350px;
-            padding: 40px 40px 40px 0
-        }
-    }
-    > div:nth-child(2) {
-        background-color: $light-bg;
-        @media screen and (min-width: $tablet-large) {
-            flex-grow: 1;
-            width: 65%;
-            border-radius: 16px;
-        }
-    }
-}
-
-/* Fonctionnement */
-#fonctionnement {
-    > div {
-        margin-top: 40px;
-    }
-}
-
-.fonctionnement {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: $light-bg;
-    margin-left: 10px;
-    margin-bottom: 30px;
-    padding: 25px 10px;
-    border-radius: 20px;
-    @include block-shadow;
-    &__number {
-        padding: 3px 8px;
-        border-radius: 50%;
-        position: relative;
-        left: -24px;
-        background-color: $primary-color;
-        color: white;
-        font-size: 16px;
-    }
-    &__icon {
-        color: rgb(142, 142, 142);
-        font-size: 20px;
-        margin-right: 30px;
-    }
-    &__texte {
-        font-size: 16px;
-        font-weight: 600;
-    }
-    &--secondary {
-        background-color: $primary-superlight; 
-        .fonctionnement__icon {
-            color: $primary-color;
-        }
-    }
-}
-
-/* Restaurants */
-.grid-restaurants {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 40px;
-    a {
-        width: 100%;
-        @media screen and (min-width: $tablet) {
-            width: 48%;
-        }   
-    }
-}
-
-.carte-restaurant {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    box-shadow: 4px 4px 10px 1px #dfdfdf;
-    position: relative;
-    @media screen and (min-width: $tablet) {
-        margin-bottom: 30px;
-    }
-    &__img {
-        img {
-            height: 170px;
-            width:100%;
-            display: block;
-            border-radius: 16px 16px 0 0;
-            object-fit: cover;
-            object-position: center bottom;
-        }
-    }
-    &__img {
-        span {
-            padding: 7px 12px;
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            color: darken($third-color, 40%);
-            background-color: $third-color;
-            border-radius: 1px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-    }
-    &__infos {
-        margin-top: 20px;
-        padding: 0 15px;
-        display: flex;
-        justify-content: space-between;
-        h3 {
-            padding-bottom: 5px;
-            font-size: 18px;
-        }
-        p {
-            font-size: 17px;
-            font-weight: 300;
-        }
-    }
-    &--2 {
-        .carte-restaurant__img {
-            img {
-                object-position: center -155px;
-            }
+        @media screen and (min-width: $labtop) {
+            height: 80.56px;
         }
     }
 }

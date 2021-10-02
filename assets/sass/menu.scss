@@ -1,17 +1,49 @@
 @import 'main.scss';
 
+/* Variables */
+
+/* Vignette plat */
+$price-minwidth: 55px;
+$checked-width: 60px;
+
+
+/* Animations affichage des vignettes de plat*/
+$num-meals: 4;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-meals;
+
+@keyframes display-meals {
+    0% {
+        opacity: 0;
+        top: 30px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .menu-header {
     height: 300px;
     &__img {
-        img {
-            display: block;
-            height: 300px;
-            width: 100%;
-            object-fit: cover;
+        display: block;
+        height: 280px;
+        width: 100%;
+        object-fit: cover;
+        &--la-palette {
+            object-position: center;
+        }
+        &--la-note {
             object-position: center -100px;
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: $tablet) {
                 object-position: center center;
             }
+        }
+        &--la-francaise {
+            @extend .menu-header__img--la-palette;
+        }
+        &--le-delice {
+            @extend .menu-header__img--la-palette;
         }
     }
 }
@@ -87,6 +119,12 @@
     box-shadow: 4px 4px 8px 1px #dedede;
     margin-bottom: 20px;
     overflow: hidden;
+    animation: display-meals 1s ease-out backwards;
+    @for $i from 1 through $num-meals {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+         }
+    }
     &:hover{
         .meal-card--hovered {
             transform: translateX(-100px);
@@ -105,8 +143,8 @@
         flex-wrap: wrap;
         align-items: baseline;
         padding: 12px 0 12px 10px;
-        max-width: calc(100% - 60px);
-        min-width: calc(100% - 120px);
+        max-width: calc(100% - $price-minwidth);
+        min-width: calc(100% - $price-minwidth - $checked-width);
     }
     &__name {
         font-weight: 500;
@@ -135,7 +173,7 @@
         align-self: flex-end;
         font-weight: 500;
         padding: 12px 0 12px 10px;
-        min-width: 60px;
+        min-width: $price-minwidth;
         @media screen and (min-width: $tablet) {
             align-self: center;
         }
@@ -148,8 +186,8 @@
         position: absolute;
         right: -100px;
         border-radius: 0 16px 16px 0;
-        width: 60px;
-        min-width: 60px;
+        width: $checked-width;
+        min-width: $checked-width;
         height: 69px;
         display: flex;
         justify-content: center;
