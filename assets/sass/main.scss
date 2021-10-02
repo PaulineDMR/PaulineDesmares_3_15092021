@@ -12,6 +12,7 @@
 body {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 a {
@@ -102,7 +103,54 @@ $tablet-large: 980px;
     }
 }
 
+/* Animation loader */
 
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes logo {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Loader */
+
+.loader {
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    animation: loader 3s backwards;
+    &__logo-box {
+        margin-top: 30vh;
+    }
+    &__logo-text {
+        font-family: $secondary-font;
+        font-size: 36px;
+        animation: logo 700ms 4;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(180deg, rgba(147,86,220,1) 10%, rgba(255,121,218,1) 70%);
+        @media screen and (min-width:768px) {
+            font-size: 50px;
+        }
+    }
+}
 
 /* HEADER */
 
