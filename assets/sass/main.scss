@@ -1,6 +1,6 @@
 @import 'variables.scss';
 
-/* General */
+/* GENERAL */
 
 * {
 	box-sizing: border-box;
@@ -87,6 +87,7 @@ main > header {
 
 .logo {
     width: 180px;
+    display: flex;
     @media screen and (min-width: $labtop) {
         width: 280px;
     }
@@ -95,14 +96,28 @@ main > header {
         width: 100%;
         object-fit: cover;
     }
-    &--shadow {
+    &__effect {
+        padding-left: 25px;
         height: 63.22px;
         width: 100%;
         position: absolute;
-        top: 0; z-index:999;
-        box-shadow: 0px 1px 4px 1px #cacaca;
+        top: 0;
+        z-index:999;
         @media screen and (min-width: $labtop) {
             height: 80.56px;
+        }
+        &--shadow {
+            box-shadow: 0px 1px 4px 1px #cacaca;
+            
+        }
+        &--arrow {
+            display: flex;
+            align-items: center;
+            i {
+                padding-top: 5px;
+                font-size: 20px;
+                color: $dark-bg;
+            }
         }
     }
 }
