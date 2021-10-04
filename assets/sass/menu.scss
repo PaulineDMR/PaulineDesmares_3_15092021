@@ -23,6 +23,8 @@ $anim-delay: $anim-dur / $num-meals;
     }
 }
 
+/* Menu */
+
 .menu-header {
     height: 300px;
     &__img {
@@ -96,13 +98,10 @@ $anim-delay: $anim-dur / $num-meals;
         }
     }
     &__order-btn {
-        width: 100%;
+        margin: 0 auto 15px;
         text-align: center;
-        margin: 0 0 15px;
-        button {
-            padding-left: 50px;
-            padding-right: 50px;
-        }
+        padding-left: 50px;
+        padding-right: 50px;
     } 
 }
 
@@ -143,8 +142,8 @@ $anim-delay: $anim-dur / $num-meals;
         flex-wrap: wrap;
         align-items: baseline;
         padding: 12px 0 12px 10px;
-        max-width: calc(100% - $price-minwidth);
-        min-width: calc(100% - $price-minwidth - $checked-width);
+        max-width: calc(100% - #{$price-minwidth});
+        min-width: calc(100% - #{$price-minwidth} - #{$checked-width});
     }
     &__name {
         font-weight: 500;
@@ -203,7 +202,7 @@ $anim-delay: $anim-dur / $num-meals;
     &__checked-icon {
         color: white;
         font-size: 20px;
-        transition: 1s transform ease .5s;
+        transition: 1s transform ease .3s;
     }
 }
 
