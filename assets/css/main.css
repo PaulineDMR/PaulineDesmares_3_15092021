@@ -57,22 +57,6 @@ main {
           box-shadow: 8px 8px 10px 1px #c2c2c2;
 }
 
-/*.main-btn {
-    margin: 15px 0;
-    &__button {
-        padding: 15px 20px;
-        color: white;
-        font-size: 16px;
-        border: none;
-        border-radius: 40px;
-        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
-        box-shadow: 4px 4px 10px 1px #c6c6c6;
-    }
-    &__button:hover {
-        background: linear-gradient(to bottom right, $secondary-light, $primary-light);
-        box-shadow: 8px 8px 10px 1px #c2c2c2
-    }
-}*/
 /* Coeur - favoris */
 .heart:before {
   position: relative;
